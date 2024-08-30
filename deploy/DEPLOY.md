@@ -1,0 +1,2 @@
+# CARPETA DEPLOY
+Archivos y scripts necesarios para el despliegue del proyecto en un entorno de producción. Aquí puedes encontrar configuraciones específicas para diferentes servidores o servicios de hospedaje.

@@ -29,7 +29,6 @@
  ## Contribución
 Solo para estudiantes de ESCOM se aceptan Pull requests.<br> Para cambios importantes, abre un issue primero para discutir lo que te gustaria cambiar.
  ## Licencia
- Este proyecto está bajo la licencia MIT.
 
  ## Autores
 Miguel Angel Ruiz González - [Correo electrónico](mailto:anonimus09122004@gmail.com) -

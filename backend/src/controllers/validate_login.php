@@ -1,5 +1,5 @@
 <?php
-include('../backend/src/config/config.php'); // Asegúrate de incluir el archivo de conexión
+include('../config/config.php'); // Asegúrate de incluir el archivo de conexión
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     // Obtener datos del formulario

@@ -1,3 +1,18 @@
+<?php
+  $userType = $_POST['user_type'];
+  $claseFondo = "../assets/img/Imagen.jpeg";
+  if ($userType == 'alumno') {
+    header("Location: http://localhost:3000/frontend/src/pages/login.php");
+    $claseFondo = "fondo-alumno";
+  } elseif ($userType == 'profesor') {
+    header("Location: http://localhost:3000/frontend/src/pages/login.php");
+    $claseFondo = "fondo-alumno";
+  } else {
+    header("Location: http://localhost:3000/frontend/src/pages/login.php");
+    $claseFondo = "fondo-alumno";
+  }
+?>
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -7,7 +22,7 @@
     <link rel="stylesheet" href="../styles/login.css" />
   </head>
   <body>
-    <h2>Login de</h2>
+    <h2>Login de </h2>
     <form action="../../../backend/src/controllers/validate_login.php" method="post">
       <input type="hidden" name="user_type" value=""/>
       <label for="username">Usuario:</label>

@@ -9,4 +9,4 @@ CREATE TABLE usuarios (
     estado VARCHAR(8) DEFAULT 'activo'
 )ENGINE=InnoDB;
 INSERT INTO usuarios (nombres,cargo,password,fyh_creacion,estado)
-VALUES ('Luis Antonio','DIRECTIVO','sandia12',"2024-08-30 22:58:20","1")
+VALUES ('Luis Antonio','directivo','sandia12',"2024-08-30 22:58:20","1")

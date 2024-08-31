@@ -6,8 +6,7 @@
     <!--Conectar el archivo CSS-->
     <link rel="stylesheet" href="../styles/login.css" />
   </head>
-  <body>
-    <?php
+  <body style=<?php
     $userType = htmlspecialchars($_GET['user_type']);
     if ($userType == 'alumno') {
         echo "background-image: url('../assets/img/Niños.jpg');";
@@ -16,8 +15,8 @@
     } else {
         echo "background-image: url('../assets/img/Niños.jpg');";
     }
-    ?>
-    <h2>Login de<?php echo htmlspecialchars($_GET['user_type']); ?></h2>
+    ?>>
+    <h2>Login de <?php echo htmlspecialchars($_GET['user_type']); ?></h2>
     <form action="validate_login.php" method="post">
       <input
         type="hidden"

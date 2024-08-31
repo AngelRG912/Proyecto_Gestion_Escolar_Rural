@@ -1,6 +1,5 @@
 <?php
-include('../config/config.php'); // Asegúrate de incluir el archivo de conexión
-
+include('../../config/config.php'); 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     // Obtener datos del formulario
     $user_type = htmlspecialchars($_POST['user_type']);

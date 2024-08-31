@@ -12,12 +12,19 @@ try {
    
     $opciones = array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8");
     
-    // Pasamos las opciones en el constructor de PDO
+    
     $conexion = new PDO($servidor, USUARIO, PASSWORD, $opciones);
-    echo "Conexión exitosa a la base de datos";
+   //echo "Conexión exitosa a la base de datos";
     
 } catch (PDOException $error) {
     echo "Conexión errónea: " . $error->getMessage();
 }
+date_default_timezone_set('America/Mexico_City');
+
+$fecha_actual=date('Y-m-d');
+$dia_actual=date('d');
+$mes_actual=date('m');
+$anio_actual=date('Y');
+$hora_actual=date('H:i:s');
 
 ?>

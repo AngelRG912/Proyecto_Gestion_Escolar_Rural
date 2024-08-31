@@ -1,7 +1,7 @@
 <?php
-  $userType = htmlspecialchars($_GET['user_type']);
+  $userType = $_REQUEST['user_type']
   if ($userType == 'alumno') {
-      echo "background-image: url('../assets/img/Niños.jpg');";
+    header("Location: login.html");
   } elseif ($userType == 'profesor') {
       echo "background-image: url('../assets/img/Profesor.jpeg');";
   } else {

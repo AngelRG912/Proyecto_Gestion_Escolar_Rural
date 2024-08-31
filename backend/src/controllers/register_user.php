@@ -1,34 +1,36 @@
 <?php
-// Conexión a la base de datos (ajusta los parámetros según tu configuración)
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "usuarios";
+include('ruta/a/tu/archivo_de_conexion.php'); // Incluir la conexión PDO
 
-// Crear conexión
-$conn = new mysqli($servername, $username, $password, $dbname);
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    // Capturar y sanitizar los datos del formulario
+    $user_type = htmlspecialchars($_POST['user_type']);
+    $username = htmlspecialchars($_POST['username']);
+    $password = $_POST['password'];
 
-// Verificar conexión
-if ($conn->connect_error) {
-    die("Conexión fallida: " . $conn->connect_error);
+    // Hashear la contraseña antes de almacenarla
+    $hashed_password = password_hash($password, PASSWORD_DEFAULT);
+
+    try {
+        // Preparar la consulta SQL
+        $sql = "INSERT INTO usuarios (nombres, cargo, password, fyh_creacion, estado) VALUES (:username, :user_type, :password, NOW(), 'activo')";
+        $stmt = $conexion->prepare($sql);
+
+        // Bind de los valores
+        $stmt->bindParam(':username', $username);
+        $stmt->bindParam(':user_type', $user_type);
+        $stmt->bindParam(':password', $hashed_password);
+
+        // Ejecutar la consulta
+        if ($stmt->execute()) {
+            echo "Registro exitoso.";
+            // Aquí podrías redirigir al usuario a otra página, por ejemplo:
+            // header("Location: success.php");
+            // exit();
+        } else {
+            echo "Hubo un problema al registrar el usuario.";
+        }
+    } catch (PDOException $error) {
+        echo "Error: " . $error->getMessage();
+    }
 }
-
-// Obtener datos del formulario
-$user_type = $_POST['user_type'];
-$username = $_POST['username'];
-$password = password_hash($_POST['password'], PASSWORD_DEFAULT); // Hash de la contraseña para mayor seguridad
-
-// Preparar y ejecutar la consulta SQL
-$stmt = $conn->prepare("INSERT INTO usuarios (user_type, username, password) VALUES (?, ?, ?)");
-$stmt->bind_param("sss", $user_type, $username, $password);
-
-if ($stmt->execute()) {
-    echo "Registro exitoso";
-} else {
-    echo "Error al registrar: " . $stmt->error;
-}
-
-// Cerrar conexión
-$stmt->close();
-$conn->close();
 ?>

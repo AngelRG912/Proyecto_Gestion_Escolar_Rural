@@ -1,5 +1,5 @@
 <?php
-include('/backend/src/config/config.php'); // Incluir la conexión PDO
+include('../config/config.php'); // Incluir la conexión PDO
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     // Capturar y sanitizar los datos del formulario

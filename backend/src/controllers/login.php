@@ -1,10 +1,10 @@
 <?php
   $userType = $_REQUEST['user_type'];
   if ($userType == 'alumno') {
-    header("Location: login.html");
+    header("Location: http://localhost:3000/frontend/src/pages/login.html");
   } elseif ($userType == 'profesor') {
-      echo "background-image: url('../assets/img/Profesor.jpeg');";
+    header("Location: http://localhost:3000/frontend/src/pages/login.html");
   } else {
-      echo "background-image: url('../assets/img/Niños.jpg');";
+    header("Location: http://localhost:3000/frontend/src/pages/login.html");
   }
 ?>

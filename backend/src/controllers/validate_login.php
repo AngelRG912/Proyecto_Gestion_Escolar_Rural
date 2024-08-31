@@ -1,38 +1,46 @@
-<!-- validate_login.php -->
 <?php
-// Conexión a la base de datos
-$servername = "localhost";
-$username = "root";
-$password = ""; // Cambia por tu contraseña
-$dbname = "usuarios";
+include('../config/config.php'); //  conexión a la base de datos
 
-$conn = new mysqli($servername, $username, $password, $dbname);
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    // Obtener datos del formulario y sanitizarlos
+    $user_type = htmlspecialchars($_POST['user_type']);
+    $user = htmlspecialchars($_POST['username']);
+    $pass = $_POST['password']; // La contraseña se debe verificar más tarde
 
-if ($conn->connect_error) {
-    die("Conexión fallida: " . $conn->connect_error);
+    try {
+        // Consulta SQL para verificar el usuario
+        $sql = "SELECT * FROM usuarios WHERE cargo = :user_type AND nombres = :username";
+        $stmt = $conexion->prepare($sql);
+        $stmt->bindParam(':user_type', $user_type);
+        $stmt->bindParam(':username', $user);
+        $stmt->execute();
+        $result = $stmt->fetch(PDO::FETCH_ASSOC);
+
+        // Mostrar datos recuperados para depuración
+        echo "<pre>";
+        print_r($result);
+        echo "</pre>";
+
+        if ($result) {
+            // Verificar la contraseña
+            if (password_verify($pass, $result['password'])) {
+                // Inicio de sesión exitoso
+                echo "Bienvenido, " . htmlspecialchars($user) . "!";
+                // Redirigir a la página correspondiente
+                // header("Location: dashboard.php");
+                // exit();
+            } else {
+                // Contraseña incorrecta
+                echo "Acceso denegado. Contraseña incorrecta.";
+            }
+        } else {
+            // Usuario no encontrado
+            echo "Acceso denegado. Usuario no encontrado.";
+        }
+    } catch (PDOException $error) {
+        echo "Error: " . $error->getMessage();
+    }
 }
-
-// Obtener datos del formulario
-$user_type = $_POST['user_type'];
-$user = $_POST['username'];
-$pass = $_POST['password'];
-
-// Consulta SQL para verificar usuario
-$sql = "SELECT * FROM usuarios WHERE tipo_usuario = ? AND nombre_usuario = ? AND contrasena = ?";
-$stmt = $conn->prepare($sql);
-$stmt->bind_param("sss", $user_type, $user, $pass);
-$stmt->execute();
-$result = $stmt->get_result();
-
-if ($result->num_rows > 0) {
-    // Inicio de sesión exitoso
-    echo "Bienvenido, " . htmlspecialchars($user) . "!";
-    // Redirigir a la página correspondiente
-} else {
-    // Inicio de sesión fallido
-    echo "Acceso denegado";
-}
-
-$stmt->close();
-$conn->close();
 ?>
+
+

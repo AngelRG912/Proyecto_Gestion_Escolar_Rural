@@ -1,5 +1,5 @@
 <?php
-include('ruta/a/tu/archivo_de_conexion.php'); // Incluir la conexión PDO
+include('/backend/src/config/config.php'); // Incluir la conexión PDO
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     // Capturar y sanitizar los datos del formulario

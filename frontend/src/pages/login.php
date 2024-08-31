@@ -17,7 +17,7 @@
     }
     ?>>
     <h2>Login de <?php echo htmlspecialchars($_GET['user_type']); ?></h2>
-    <form action="validate_login.php" method="post">
+    <form action="../../../backend/src/controllers/validate_login.php" method="post">
       <input
         type="hidden"
         name="user_type"

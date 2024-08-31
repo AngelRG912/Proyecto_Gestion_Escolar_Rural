@@ -1,0 +1,74 @@
+body {
+  font-family: Arial, sans-serif;
+  background-size: cover; /* Ajusta la imagen para que cubra toda la página */
+  background-position: center; /* Centra la imagen de fondo */
+  background-repeat: no-repeat; /* Evita que la imagen se repita */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+  text-align: center;
+}
+
+h2 {
+  color: #555;
+  margin-bottom: 20px;
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.8
+  ); /* Fondo blanco semitransparente */
+  padding: 10px;
+  border-radius: 5px;
+}
+
+form {
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.8
+  ); /* Fondo blanco semitransparente */
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para el formulario */
+}
+
+label {
+  display: block;
+  margin: 10px 0 5px;
+}
+
+input[type="text"],
+input[type="password"] {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #2196f3; /* Color similar a los botones de la página inicial */
+  color: white;
+  transition: background-color 0.3s;
+  margin-top: 15px;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+.register-link {
+  display: block;
+  margin-top: 20px;
+}

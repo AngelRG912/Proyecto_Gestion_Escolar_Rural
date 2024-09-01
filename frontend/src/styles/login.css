@@ -72,3 +72,15 @@ button:hover {
   display: block;
   margin-top: 20px;
 }
+
+body.Alumno {
+  background-image: url(../assets/img/Alumno.jpg);
+}
+
+body.Profesor {
+  background-image: url(../assets/img/Profesor.jpeg);
+}
+
+body.Plantel {
+  background-image: url(../assets/img/Plantel.jpg);
+}

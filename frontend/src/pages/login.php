@@ -9,7 +9,7 @@
 </head>
 <body class="<?php echo htmlspecialchars($_GET['user_type']); ?>">
   <h2>Login de <?php echo htmlspecialchars($_GET['user_type']); ?></h2>
-  <form action="../../../backend/src/controllers/validate_login.php" method="get">
+  <form action="../../../backend/src/controllers/validate_login.php" method="post">
     <input type="hidden" name="user_type" value="<?php echo htmlspecialchars($_GET['user_type']); ?>" />
     <label for="username">Usuario:</label>
     <input type="text" id="username" name="username" required />

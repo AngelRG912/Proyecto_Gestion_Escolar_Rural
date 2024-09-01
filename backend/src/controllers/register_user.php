@@ -1,7 +1,7 @@
 <?php
 include('../config/config.php'); // conexión PDO
 
-if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+if ($_SERVER['REQUEST_METHOD'] == 'GET') {
     // Capturar y sanitizar los datos del formulario
     $user_type = htmlspecialchars($_POST['user_type']);
     $username = htmlspecialchars($_POST['username']);

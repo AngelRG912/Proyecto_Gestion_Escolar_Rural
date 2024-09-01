@@ -27,7 +27,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 // Inicio de sesión exitoso
                 echo "Bienvenido, " . htmlspecialchars($user) . "!";
                 // Redirigir a la página correspondiente
-                header("Location: http://localhost:3000/frontend/public/index.html");
+                //header("Location: http://localhost:3000/frontend/src/pages/initial.php");
                 exit();
             } else {
                 // Contraseña incorrecta

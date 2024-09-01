@@ -20,7 +20,7 @@
     <br />
     <button type="submit">Ingresar</button>
   </form>
-  <p class="register-link">¿No tienes una cuenta?<a href="../../../backend/src/controllers/register_user.php">Regístrate aquí</a></p>
+  <p class="register-link">¿No tienes una cuenta?<a href="../pages/register.html">Regístrate aquí</a></p>
 </body>
 
 </html>

@@ -73,14 +73,14 @@ button:hover {
   margin-top: 20px;
 }
 
-.fondo-alumno {
-  background-image: url('../assets/img/Niños.jpg');
+body.Alumno {
+  background-image: url(../assets/img/Alumno.jpg);
 }
 
-.fondo-profesor {
-  background-image: url('../assets/img/Profesor.jpeg');
+body.Profesor {
+  background-image: url(../assets/img/Profesor.jpeg);
 }
 
-.fondo-escuela {
-  background-image: url('../assets/img/Escuela.jpg');
+body.Plantel {
+  background-image: url(../assets/img/Plantel.jpg);
 }

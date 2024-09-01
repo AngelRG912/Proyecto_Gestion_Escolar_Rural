@@ -5,9 +5,9 @@
     <title>Registro de Usuario</title>
 </head>
 <body>
-    <h2>Registro de</h2>
+    <h2>Registro de <?php echo htmlspecialchars($_GET['user_type']); ?></h2>
     <form action="../../../backend/src/controllers/register_user.php" method="post">
-        <input type="hidden" name="user_type">
+        <input type="hidden" name="user_type" value="<?php echo htmlspecialchars($_GET['user_type']); ?>>
         <label for="username">Usuario:</label>
         <input type="text" id="username" name="username" required>
         <br>

@@ -6,7 +6,7 @@
   } elseif ($userType == 'profesor') {
     header("Location: http://localhost/GitHub/Proyecto_Gestion_Escolar_Rural/frontend/src/pages/login.html");
     exit();
-  } else {
+  } elseif ($userType == 'directivo'){
     header("Location: http://localhost/GitHub/Proyecto_Gestion_Escolar_Rural/frontend/src/pages/login.html");
     exit();
   }

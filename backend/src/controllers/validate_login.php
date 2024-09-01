@@ -17,17 +17,18 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $result = $stmt->fetch(PDO::FETCH_ASSOC);
 
         // Mostrar datos recuperados para depuración
-        echo "<pre>";
+        /*echo "<pre>";
         print_r($result);
         echo "</pre>";
+        */
 
         if ($result) {
             // Verificar la contraseña
             if (password_verify($pass, $result['password'])) {
                 // Inicio de sesión exitoso
-                echo "Bienvenido, " . htmlspecialchars($user) . "!";
+                //echo "Bienvenido, " . htmlspecialchars($user) . "!";
                 // Redirigir a la página correspondiente
-                //header("Location: http://localhost:3000/frontend/src/pages/initial.php");
+                header("Location: http://localhost:3000/frontend/src/pages/initial.php");
                 exit();
             } else {
                 // Contraseña incorrecta

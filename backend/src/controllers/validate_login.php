@@ -27,8 +27,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 // Inicio de sesión exitoso
                 echo "Bienvenido, " . htmlspecialchars($user) . "!";
                 // Redirigir a la página correspondiente
-                // header("Location: dashboard.php");
-                // exit();
+                header("Location: http://localhost:3000/frontend/public/index.html");
+                exit();
             } else {
                 // Contraseña incorrecta
                 echo "Acceso denegado. Contraseña incorrecta.";

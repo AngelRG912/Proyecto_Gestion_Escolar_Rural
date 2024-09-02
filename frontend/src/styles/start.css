@@ -1,0 +1,44 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  background-color: #ffffff;
+}
+
+.header {
+  width: 100%;
+  height: 4em;
+  background-color: #0c231e;
+}
+
+.navbar {
+  width: 100%;
+}
+
+.navbar-header {
+    position: absolute;
+    top: 10px;
+    left: 20px;
+}
+
+.escudo {
+    height: 38px;
+    width: auto;
+}
+
+.banner {
+  width: 100%;
+  height: calc(100vh - 4em);
+  background-color: #ffffff;
+}
+
+.footer {
+  width: 100%;
+  height: 4em;
+  background-color: #333;
+}

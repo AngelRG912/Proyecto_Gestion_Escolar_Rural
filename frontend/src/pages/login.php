@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta charset="UTF-8" />
-  <title>Login</title>
+  <title>Inicio de Sesión</title>
   <!--Conectar CSS-->
   <link rel="stylesheet" href="../styles/login.css" />
 </head>

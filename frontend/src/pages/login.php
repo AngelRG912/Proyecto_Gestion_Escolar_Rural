@@ -1,10 +1,9 @@
 <!DOCTYPE html>
 <html>
-
 <head>
   <meta charset="UTF-8" />
   <title>Login</title>
-  <!--Conectar el archivo CSS-->
+  <!--Conectar CSS-->
   <link rel="stylesheet" href="../styles/login.css" />
 </head>
 <body class="<?php echo htmlspecialchars($_GET['user_type']); ?>">

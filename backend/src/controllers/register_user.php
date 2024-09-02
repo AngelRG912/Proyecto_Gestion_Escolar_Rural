@@ -22,10 +22,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
         // Ejecutar la consulta
         if ($stmt->execute()) {
-            echo "Registro exitoso.";
-            // Aquí podrías redirigir al usuario a otra página, por ejemplo:
-            // header("Location: success.php");
-            // exit();
+            //echo "Registro exitoso.";
+            header("Location: http://localhost:3000/frontend/src/pages/login.php?user_type=$user_type");
+            exit();
         } else {
             echo "Hubo un problema al registrar el usuario.";
         }

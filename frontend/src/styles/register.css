@@ -68,11 +68,6 @@ button:hover {
   opacity: 0.8;
 }
 
-.register-link {
-  display: block;
-  margin-top: 20px;
-}
-
 body.Alumno {
   background-image: url(../assets/img/Alumno.jpg);
 }
@@ -83,12 +78,4 @@ body.Profesor {
 
 body.Directivo {
   background-image: url(../assets/img/Plantel.jpg);
-}
-
-p.Alumno {
-  color: #ffffff;
-}
-
-p.Directivo {
-  color: #ffffff;
 }

@@ -3,8 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <title>Registro de Usuario</title>
+    <!--Conectar CSS-->
+    <link rel="stylesheet" href="../styles/register.css" />
 </head>
-<body>
+<body class="<?php echo htmlspecialchars($_GET['user_type']); ?>">
     <h2>Registro de <?php echo htmlspecialchars($_GET['user_type']); ?></h2>
     <form action="../../../backend/src/controllers/register_user.php" method="post">
         <input type="hidden" name="user_type" value="<?php echo htmlspecialchars($_GET['user_type']); ?>">

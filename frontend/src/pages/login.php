@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="../styles/login.css" />
 </head>
 <body class="<?php echo htmlspecialchars($_GET['user_type']); ?>">
-  <h2>Login de <?php echo htmlspecialchars($_GET['user_type']); ?></h2>
+  <h2>Inicio de sesión (<?php echo htmlspecialchars($_GET['user_type']); ?>)</h2>
   <form action="../../../backend/src/controllers/validate_login.php" method="post">
     <input type="hidden" name="user_type" value="<?php echo htmlspecialchars($_GET['user_type']); ?>" />
     <label for="username">Usuario:</label>
@@ -19,7 +19,8 @@
     <br />
     <button type="submit">Ingresar</button>
   </form>
-  <p class="register-link">¿No tienes una cuenta?<a href="../pages/register.php?user_type=<?php echo htmlspecialchars($_GET['user_type']); ?>">Regístrate aquí</a></p>
+  <p class="<?php echo htmlspecialchars($_GET['user_type']); ?>">¿No tienes una cuenta?<br>
+  <a href="../pages/register.php?user_type=<?php echo htmlspecialchars($_GET['user_type']); ?>">Regístrate aquí</a></p>
 </body>
 
 </html>

@@ -64,8 +64,6 @@ Luis Antonio Sandoval Vargas - [Correo electrónico](mailto:luisasv1106@gmail.co
 [GitHub](https://github.com/elantonio12)<br>
 Edgar Aldair López López - [Correo electrónico](mailto:edgaraldairvoca7@gmail.com) -
 [GitHub](https://github.com/EdgarAldairLopezLopez)<br>
-Santiago Capire Martinez - [Correo electrónico](mailto:santiagocapire@gmail.com) -
-[GitHub](https://github.com/easja)<br>
 Eber Isamel Romero Contreras - [Correo electrónico](mailto:eberromero483@gmail.com) -
 [GitHub](https://github.com/Eber-pai)
 

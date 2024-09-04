@@ -45,7 +45,7 @@ Este proyecto es un sistema de gestión escolar diseñado para instituciones de 
 ## Instalación
 
 Para GIT Bash
-cd -/Documentos
+cd -/Documentos <br>
 git clone https://github.com/AngelRG912/Proyecto_Gestion_Escolar_Rural.git<br>
 cd Proyecto_Gestion_Escolar_Rural
 
